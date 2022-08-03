@@ -3,31 +3,32 @@ import { useParams } from 'react-router'
 import All from '../sklet/All'
 
 const About = () => {
-    const son = parseInt(useParams().id);
-    console.log(son);
+    // const son = parseInt(useParams().id);
+    // console.log(son);
 
-    const [aboutData, setAboutData] = useState([]);
+    // const [aboutData, setAboutData] = useState([]);
 
-    const axios = require("axios").default;
-    const Key = "51cc7f5f459038d8f6fd27150449d6a1"
+    // const axios = require("axios").default;
+    // const Key = "51cc7f5f459038d8f6fd27150449d6a1"
 
-    useEffect(() => {
-        axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${Key}&language=en-US&page=1`)
-            .then((v) => {
-                console.log(v.data.results);
-                setAboutData(v.data.results)
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }, []);
+    // useEffect(() => {
+    //     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${Key}&language=en-US&page=1`)
+    //         .then((v) => {
+    //             console.log(v.data.results);
+    //             setAboutData(v.data.results)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
+    // }, []);
 
-    console.log("about da gi data", aboutData[son]);
+    // console.log("about da gi data", aboutData[son]);
 
 
     return (
         <div>
-            <All>
+            <h1>salom</h1>
+            {/* <All>
                 <div className="container">
                     {
                         (aboutData.length > 0) ? (
@@ -51,7 +52,7 @@ const About = () => {
                 </div>
 
 
-            </All>
+            </All> */}
         </div>
     )
 }
